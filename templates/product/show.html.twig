@@ -24,6 +24,7 @@
 
     <div class="container">
         <div class="row">
+
             <!-- Image -->
             <div class="col-12 col-lg-6">
                 <div class="card bg-light mb-3">
@@ -40,7 +41,7 @@
             <div class="col-12 col-lg-6 add_to_cart_block">
                 <div class="card bg-light mb-3">
                     <div class="card-body">
-                        <p class="price">99.00 &euro;</p>
+                        <p class="price">{{ product.price / 100 }} €</p>
                         <p class="price_discounted">149.90 &euro;</p>
                         <form method="get" action="{{ path('cart') }}">
                             <div class="form-group">
@@ -68,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="cart.html" class="btn btn-success btn-lg btn-block text-uppercase">
+                            <a href="{{ path('cart') }}" class="btn btn-success btn-lg btn-block text-uppercase">
                                 <i class="fa fa-shopping-cart"></i> Ajouter au panier
                             </a>
                         </form>
